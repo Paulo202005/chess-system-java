@@ -21,12 +21,12 @@ public class Program {
 		while (!chessMatch.getCheckMate()) {
 			try {
 				UI.clearScreen();
-				UI.PrintMatch(chessMatch, captured);
+				UI.printMatch(chessMatch, captured);
 				System.out.println();
 				System.out.print("Source: ");
 				ChessPosition source = UI.readChessPosition(sc);
 				
-				boolean[][] possibleMoves = chessMatch.PossibleMoves(source);
+				boolean[][] possibleMoves = chessMatch.possibleMoves(source);
 				UI.clearScreen();
 				UI.printBoard(chessMatch.getPieces(), possibleMoves);				
 				System.out.println();
@@ -49,6 +49,6 @@ public class Program {
 			}
 		}	
 		UI.clearScreen();
-		UI.PrintMatch(chessMatch, captured);
+		UI.printMatch(chessMatch, captured);
 	}	
 }
